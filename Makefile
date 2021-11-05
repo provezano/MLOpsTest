@@ -1,6 +1,7 @@
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -r requirements.txt &&\
+		sudo apt-get install pylint
 lint:
 	pylint --disable=R,C hello.py
 
