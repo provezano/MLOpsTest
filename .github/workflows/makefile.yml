@@ -3,16 +3,11 @@ name: Makefile CI
 on: [push]
 
 jobs:
-  vm:
-
-    runs-on: ubuntu-latest
-
-  container:
+  build:
     strategy:
       matrix:
         python-version: [3.6, 3.7, 3.8]
     runs-on: ubuntu-latest
-    container: python:latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
